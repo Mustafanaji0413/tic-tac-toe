@@ -1,14 +1,16 @@
+
+
 # tic tac toe
 
 """
 tic tac toe board
 [
-    [-, -, -,],
+    [x, -, -,],
     [-, -, -,],
     [-, -, -,]
 ]
 
-user_input -> somthing between 1-9
+user_input -> something between 1-9
 if they input somthing else say: Wrong input, try again!
 check if the user input has already been taken
 add it to the board
@@ -27,11 +29,10 @@ def print_board(board):
         for slot in row:
             print(f"{slot}  ", end="")
         print()
-             
-
+            
 
 def quit(user_input):
-    if user_input == "q": 
+    if user_input.lower() == "q": 
         print("Thank you for playing!")
         return True
     else: return False
@@ -42,6 +43,8 @@ def check_input(user_input):
     user_input = int(user_input)
     #check if its the number 1-9
     if not bounds(user_input): return False
+
+    return True
 
 def isnum(user_input):
     if not user_input.isnumeric():
