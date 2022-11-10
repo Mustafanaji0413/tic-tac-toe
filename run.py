@@ -22,7 +22,7 @@ board = [
     ["-", "-", "-"]
 ]
 
-user = True # when true it refers to x, otherwise o
+user = True # when boolian is true it refers to user X, otherwise user O
 turns = 0
 
 def print_board(board):
@@ -73,12 +73,17 @@ def coordinates(user_input):
     if col > 2: col = int(col % 3)
     return (row,col)
 
-def add_to_board(coords,board):
+def add_to_board(coords, board, active_user):
     row = coords[0]
     col = coords[1]
-    board[row][col] = "x"
+    board[row][col] = active_user
+
+def current_user(user):
+    if user: return "x"
+    else: return "o"
 
 while True:
+    active_user = current_user(user)
     print_board(board)
     user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit:")
     if quit(user_input): break
@@ -88,7 +93,8 @@ while True:
     user_input = int(user_input) - 1
     coords = coordinates(user_input)
     if istaken(coords, board):
-        print("Please try again!!!")
+        print("Please try again!")
         continue
-    add_to_board(coords,board)
+    add_to_board(coords,board, active_user)
+    user = not user
     
