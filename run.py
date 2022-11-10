@@ -36,6 +36,23 @@ def quit(user_input):
         return True
     else: return False
 
+def check_input(user_input):
+    # check if its a number
+    if not isnum(user_input): return False
+    #check if its the number 1-9
+    return True
+
+def isnum(user_input):
+    if not user_input.isnumeric():
+        print("This is not a valid number")
+        return False
+    else: return True
+
+
 while True:
+    print_board(board)
     user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit:")
     if quit(user_input): break
+    if not check_input(user_input):
+        print("Please try again!")
+        continue
