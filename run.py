@@ -1,5 +1,3 @@
-
-
 # tic tac toe
 
 """
@@ -23,6 +21,9 @@ board = [
     ["-", "-", "-"],
     ["-", "-", "-"]
 ]
+
+user = True # when true it refers to x, otherwise o
+turns = 0
 
 def print_board(board):
     for row in board:
@@ -72,6 +73,11 @@ def coordinates(user_input):
     if col > 2: col = int(col % 3)
     return (row,col)
 
+def add_to_board(coords,board):
+    row = coords[0]
+    col = coords[1]
+    board[row][col] = "x"
+
 while True:
     print_board(board)
     user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit:")
@@ -81,7 +87,8 @@ while True:
         continue
     user_input = int(user_input) - 1
     coords = coordinates(user_input)
-    board[0][0] = "x"
     if istaken(coords, board):
         print("Please try again!!!")
         continue
+    add_to_board(coords,board)
+    
