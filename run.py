@@ -82,6 +82,20 @@ def current_user(user):
     if user: return "x"
     else: return "o"
 
+def iswin(user, board):
+    if check_row(user, board): return True
+    return False
+
+def check_row(user, board):
+    for row in board:
+        complete_row = True
+        for slot in row:
+            if slot != user:
+                complete_row = False
+                break
+        if complete_row: return True
+    return False
+
 while True:
     active_user = current_user(user)
     print_board(board)
@@ -96,5 +110,9 @@ while True:
         print("Please try again!")
         continue
     add_to_board(coords,board, active_user)
+    if iswin(active_user, board):
+       print(f"{active_user.upper()} Won!")
+       break
+
     user = not user
     
