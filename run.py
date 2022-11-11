@@ -1,5 +1,5 @@
 
-# tic tac toe
+# tic tac toe explination
 
 """
 tic tac toe board
@@ -17,6 +17,7 @@ check if somone won: check rows, colums and diagonals
 jump between users after each correct move
 """
 
+    
 board = [
     ["-", "-", "-"],
     ["-", "-", "-"],
@@ -47,19 +48,20 @@ def check_input(user_input):
     #check if its the number 1-9
     if not bounds(user_input): return False
     return True
-
+#check if the input value is a number
 def isnum(user_input):
     if not user_input.isnumeric():
         print("This is not a valid number")
         return False
     else: return True
-
+#check if the number inserted is between the number 1-9
 def bounds(user_input):
     if user_input > 9 or user_input < 1:
         print("This number is not in range")
         return False
     else: return True    
 
+#check if the psotion is already occupied 
 def istaken(coords, board):
     row = coords[0]
     col = coords[1]
@@ -68,6 +70,7 @@ def istaken(coords, board):
         return True
     else: return False    
 
+#enter the cordinates of the board positons
 def coordinates(user_input):
     row = int(user_input / 3)
     col = user_input 
@@ -79,16 +82,19 @@ def add_to_board(coords, board, active_user):
     col = coords[1]
     board[row][col] = active_user
 
+#check who current user is
 def current_user(user):
     if user: return "x"
     else: return "o"
 
+#check if anybody has won through rowm col or diag
 def iswin(user, board):
     if check_row(user, board): return True
     if check_col(user, board): return True 
     if check_diag(user, board): return True
     return False
 
+    #chek win in row
 def check_row(user, board):
     for row in board:
         complete_row = True
@@ -99,6 +105,7 @@ def check_row(user, board):
         if complete_row: return True
     return False
 
+    #chek win in col
 def check_col(user, board):
     for col in range(3):
         complete_col = True
@@ -109,12 +116,14 @@ def check_col(user, board):
         if complete_col: return True
     return False
         
+     #chek win in diag
 def check_diag(user, board):
     #from top left to bottom right 
     if board[0][0] == user and board[1][1] == user and board[2][2] == user: return True
     #from top right bottom left
     elif board[0][2] == user and board[1][1] == user and board[2][0] == user: return True
     else: return False
+
 
 while turns < 9:
     active_user = current_user(user)
