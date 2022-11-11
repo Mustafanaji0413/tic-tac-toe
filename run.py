@@ -1,3 +1,4 @@
+
 # tic tac toe
 
 """
@@ -31,6 +32,7 @@ def print_board(board):
             print(f"{slot}  ", end="")
         print()
             
+# quit function 
 
 def quit(user_input):
     if user_input.lower() == "q": 
@@ -44,7 +46,6 @@ def check_input(user_input):
     user_input = int(user_input)
     #check if its the number 1-9
     if not bounds(user_input): return False
-
     return True
 
 def isnum(user_input):
@@ -135,4 +136,3 @@ while turns < 9:
     turns += 1
     if turns == 9: print("It's a draw -_-")
     user = not user
-    
