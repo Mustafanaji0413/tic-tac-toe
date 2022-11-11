@@ -115,7 +115,7 @@ def check_diag(user, board):
     elif board[0][2] == user and board[1][1] == user and board[2][0] == user: return True
     else: return False
 
-while True:
+while turns < 9:
     active_user = current_user(user)
     print_board(board)
     user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit:")
@@ -132,6 +132,7 @@ while True:
     if iswin(active_user, board):
        print(f"{active_user.upper()} Won!")
        break
-
+    turns += 1
+    if turns == 9: print("It's a draw -_-")
     user = not user
     
