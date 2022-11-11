@@ -84,7 +84,8 @@ def current_user(user):
 
 def iswin(user, board):
     if check_row(user, board): return True
-    if check_col(user, board): return True
+    if check_col(user, board): return True 
+    if check_diag(user, board): return True
     return False
 
 def check_row(user, board):
@@ -107,6 +108,12 @@ def check_col(user, board):
         if complete_col: return True
     return False
         
+def check_diag(user, board):
+    #from top left to bottom right 
+    if board[0][0] == user and board[1][1] == user and board[2][2] == user: return True
+    #from top right bottom left
+    elif board[0][2] == user and board[1][1] == user and board[2][0] == user: return True
+    else: return False
 
 while True:
     active_user = current_user(user)
