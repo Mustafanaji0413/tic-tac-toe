@@ -28,41 +28,53 @@ user = True # when boolian is true it refers to user X, otherwise user O
 turns = 0
 
 def print_board(board):
+    """
+    Print game board
+    """
     for row in board:
         for slot in row:
             print(f"{slot}  ", end="")
         print()
-            
-# quit function 
 
 def quit(user_input):
-    if user_input.lower() == "q": 
+     """
+    Allow user to quit the game
+    """
+    if user_input.lower() == "q":
         print("Thank you for playing!")
         return True
     else: return False
 
 def check_input(user_input):
-    # check if its a number
+    """
+    Check if user input is a number
+    """
     if not isnum(user_input): return False
     user_input = int(user_input)
-    #check if its the number 1-9
     if not bounds(user_input): return False
     return True
-#check if the input value is a number
+
 def isnum(user_input):
+    """
+    Check if user input is a number
+    """
     if not user_input.isnumeric():
         print("This is not a valid number")
         return False
     else: return True
-#check if the number inserted is between the number 1-9
 def bounds(user_input):
+    """
+    check if the number inserted is between the number 1-9
+    """
     if user_input > 9 or user_input < 1:
         print("This number is not in range")
         return False
     else: return True    
 
-#check if the psotion is already occupied 
 def istaken(coords, board):
+    """
+    check if the psotion is already occupied
+    """
     row = coords[0]
     col = coords[1]
     if board[row][col] != "-":
@@ -70,32 +82,44 @@ def istaken(coords, board):
         return True
     else: return False    
 
-#enter the cordinates of the board positons
+
 def coordinates(user_input):
+    """
+    enter the cordinates of the board positons
+    """
     row = int(user_input / 3)
     col = user_input 
     if col > 2: col = int(col % 3)
     return (row,col)
 
 def add_to_board(coords, board, active_user):
+    """
+    add the user input to the board 
+    """
     row = coords[0]
     col = coords[1]
     board[row][col] = active_user
 
-#check who current user is
 def current_user(user):
+    """
+    check who is the current winner
+    """
     if user: return "x"
     else: return "o"
 
-#check if anybody has won through rowm col or diag
 def iswin(user, board):
+    """
+    check to see if anyone has won through rowm col or diag
+    """
     if check_row(user, board): return True
     if check_col(user, board): return True 
     if check_diag(user, board): return True
     return False
 
-    #chek win in row
 def check_row(user, board):
+    """
+    check to see if anyone has won through row
+    """
     for row in board:
         complete_row = True
         for slot in row:
@@ -105,8 +129,10 @@ def check_row(user, board):
         if complete_row: return True
     return False
 
-    #chek win in col
 def check_col(user, board):
+    """
+    check to see if anyone has won through col
+    """
     for col in range(3):
         complete_col = True
         for row in range(3):
@@ -116,8 +142,10 @@ def check_col(user, board):
         if complete_col: return True
     return False
         
-     #chek win in diag
 def check_diag(user, board):
+    """
+    check to see if anyone has won through diag
+    """
     #from top left to bottom right 
     if board[0][0] == user and board[1][1] == user and board[2][2] == user: return True
     #from top right bottom left
