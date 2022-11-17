@@ -35,13 +35,14 @@ def print_board(board):
         print()
 
 def quit(user_input):
-     """
+    """
     Allow user to quit the game
     """
     if user_input.lower() == "q":
         print("Thank you for playing!")
         return True
-    else: return False
+    else:
+         return False
 
 def check_input(user_input):
     """
@@ -144,9 +145,7 @@ def check_diag(user, board):
     """
     check to see if anyone has won through diag
     """
-    #from top left to bottom right 
     if board[0][0] == user and board[1][1] == user and board[2][2] == user: return True
-    #from top right bottom left
     elif board[0][2] == user and board[1][1] == user and board[2][0] == user: return True
     else: return False
 
@@ -165,9 +164,9 @@ while turns < 9:
         print("Please try again!")
         continue
     add_to_board(coords,board, active_user)
-    if iswin(active_user, board):
-       print(f"{active_user.upper()} Won!")
-       break
+    if iswin(active_user, board): 
+        print(f"{active_user.upper()}Won!")
+        break
     turns += 1
     if turns == 9: print("It's a draw -_-")
     user = not user
