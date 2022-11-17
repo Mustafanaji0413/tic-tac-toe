@@ -1,6 +1,4 @@
 
-# tic tac toe explination
-
 """
 tic tac toe board
 [
@@ -156,7 +154,7 @@ def check_diag(user, board):
 while turns < 9:
     active_user = current_user(user)
     print_board(board)
-    user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit:")
+    user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit: \n")
     if quit(user_input): break
     if not check_input(user_input):
         print("Please try again!")
