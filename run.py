@@ -165,7 +165,7 @@ while turns < 9:
         continue
     add_to_board(coords,board, active_user)
     if iswin(active_user, board): 
-        print(f"{active_user.upper()}Won!")
+        print(active_user + " Won!")
         break
     turns += 1
     if turns == 9: print("It's a draw -_-")
