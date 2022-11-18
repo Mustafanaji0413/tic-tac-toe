@@ -2,7 +2,9 @@
 
 The perfect Tic, Tac, Toe game is a Python terminal game that runs in the Code Institute mock terminal on Heroku. It's a fun and interactive game that takes us right back to our childhood memories. Challenge yourself in a single-player game, or get revenge from your long-time rival in a multiplayer game.
 
-<a href="https://mustafanaji0413.github.io/tic-tac-toe/">Here Is the live version if my project</a>
+<a href="https://mustafanaji0413.github.io/tic-tac-toe/">Here Is the live version if my README.md</a>
+
+<a href="https://tic-tac-toe-mustafa.herokuapp.com/">Here Is the live version if my project</a>
 <img width="800" alt="Screenshot 2022-11-18 at 14 35 12" src="https://user-images.githubusercontent.com/115544231/202762708-cb9cc42e-f9a2-4877-a2d5-272b5e81f54c.png">
 
 
