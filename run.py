@@ -190,7 +190,7 @@ while turns < 9:
     active_user = current_user(user)
     print_board(board)
     user_input = input("Please choose a position 1 through 9"
-                       "or enter \"q\" to quit:")
+                       " or enter \"q\" to quit:")
     if quit(user_input):
         break
     if not check_input(user_input):
