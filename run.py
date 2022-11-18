@@ -15,7 +15,10 @@ check if somone won: check rows, colums and diagonals
 jump between users after each correct move
 """
 
-    
+print("The rules are simple. Get three in a row to win the game. \nEither through  collumns, rows or diagonally. Good luck!")
+print("1, 2, 3,\n4, 5, 6,\n7, 8, 9\n")
+
+
 board = [
     ["-", "-", "-"],
     ["-", "-", "-"],
@@ -153,7 +156,7 @@ def check_diag(user, board):
 while turns < 9:
     active_user = current_user(user)
     print_board(board)
-    user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit: \n")
+    user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit:")
     if quit(user_input): break
     if not check_input(user_input):
         print("Please try again!")
