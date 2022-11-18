@@ -31,7 +31,10 @@ The fulfillment plan is as follows:
 - First, the game will start with a rule description on how to play.
 - Under the rules, there will be an example board that shows each position's number. 
 - Under the example, the board is the official game board.
-- And under the game board, there is an instruciton on what to do and how to quit the game. <img>
+- And under the game board, there is an instruciton on what to do and how to quit the game.
+
+<img width="730" alt="Screenshot 2022-11-18 at 18 20 44" src="https://user-images.githubusercontent.com/115544231/202764263-81a15557-635d-43a5-83f3-2f60704a3271.png">
+
 Then Player 1 will make his/her move by placing his  “X” mark on the board. Then Player 2 will make his/her move by placing the mark “O” on the board. This will keep on going until the board is full of marks.
 
 Then the program will check if Player 1 with “X” wins or Player 2 with “O” wins and that scenario will be as follows: (could be vertically, horizontally, or diagonally).

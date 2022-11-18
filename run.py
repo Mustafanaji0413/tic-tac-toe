@@ -21,9 +21,9 @@ print(" 1,  2,  3,\n 4,  5,  6,\n 7,  8,  9\n")
 
 
 board = [
-    [" - ", " - ", " - "],
-    [" - ", " - ", " - "],
-    [" - ", " - ", " - "]
+    ["-", "-", "-"],
+    ["-", "-", "-"],
+    ["-", "-", "-"]
 ]
 
 user = True  # when boolian is true it refers to user X, otherwise user O
