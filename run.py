@@ -88,12 +88,12 @@ def bounds(user_input):
 
 def istaken(coords, board):
     """
-    check if the psotion is already occupied
+    check if the position is already occupied
     """
     row = coords[0]
     col = coords[1]
-    if board[row][col] != " - ":
-        print("This posotion is already taken, try again.")
+    if board[row][col] != "-":
+        print("This position is already taken, try again.")
         return True
     else:
         return False
@@ -190,7 +190,7 @@ while turns < 9:
     active_user = current_user(user)
     print_board(board)
     user_input = input("Please choose a position 1 through 9"
-                       " or enter \"q\" to quit:")
+                       " or enter \"q\" to quit: ")
     if quit(user_input):
         break
     if not check_input(user_input):
