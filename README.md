@@ -25,7 +25,9 @@ The perfect Tic, Tac, Toe game is a Python terminal game that runs in the Code I
 
 ## Fulfillment Plan
 The fulfillment plan is as follows: 
-<img width="542" alt="Screenshot 2022-11-18 at 18 14 56" src="https://user-images.githubusercontent.com/115544231/202763124-7d5d68fa-299e-498e-b9bf-f156c3e883bd.png">
+<img width="442" alt="Screenshot 2022-11-18 at 18 14 56" src="https://user-images.githubusercontent.com/115544231/202763124-7d5d68fa-299e-498e-b9bf-f156c3e883bd.png">
+
+To help visualize the defined game rules and description, the game is shown below.
 
 
 - First, the game will start with a rule description on how to play.
@@ -33,13 +35,23 @@ The fulfillment plan is as follows:
 - Under the example, the board is the official game board.
 - And under the game board, there is an instruciton on what to do and how to quit the game.
 
-<img width="730" alt="Screenshot 2022-11-18 at 18 20 44" src="https://user-images.githubusercontent.com/115544231/202764263-81a15557-635d-43a5-83f3-2f60704a3271.png">
+<img width="729" alt="Screenshot 2022-11-18 at 19 03 13" src="https://user-images.githubusercontent.com/115544231/202772528-2c09537a-157e-47ac-8586-a3e7ae3d8fdd.png">
+
 
 Then Player 1 will make his/her move by placing his  “X” mark on the board. Then Player 2 will make his/her move by placing the mark “O” on the board. This will keep on going until the board is full of marks.
 
+
 Then the program will check if Player 1 with “X” wins or Player 2 with “O” wins and that scenario will be as follows: (could be vertically, horizontally, or diagonally).
-<img> <img>
+
+<img width="1000" alt="Screenshot 2022-11-18 at 18 52 05" src="https://user-images.githubusercontent.com/115544231/202770032-30243d27-7af6-4729-a39e-0561c1de3bf6.png">
+
+
 If none of the players win, the program will check for a draw.
+
+<img width="730" alt="Screenshot 2022-11-18 at 18 57 34" src="https://user-images.githubusercontent.com/115544231/202771426-5d2cb449-dae2-4eea-b617-125745ab303e.png">
+
+
+
 
  ## Features
  ### Existing features
