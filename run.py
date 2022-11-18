@@ -15,18 +15,20 @@ check if somone won: check rows, colums and diagonals
 jump between users after each correct move
 """
 
-print("The rules are simple. Get three in a row to win the game. \nEither through  collumns, rows or diagonally. Good luck!")
-print("1, 2, 3,\n4, 5, 6,\n7, 8, 9\n")
+print("The rules are simple. Get three in a row to win the game.")
+print("Either through collumns, rows or diagonally. Good luck! \n")
+print(" 1,  2,  3,\n 4,  5,  6,\n 7,  8,  9\n")
 
 
 board = [
-    ["-", "-", "-"],
-    ["-", "-", "-"],
-    ["-", "-", "-"]
+    [" - ", " - ", " - "],
+    [" - ", " - ", " - "],
+    [" - ", " - ", " - "]
 ]
 
-user = True # when boolian is true it refers to user X, otherwise user O
+user = True  # when boolian is true it refers to user X, otherwise user O
 turns = 0
+
 
 def print_board(board):
     """
@@ -34,8 +36,9 @@ def print_board(board):
     """
     for row in board:
         for slot in row:
-            print( slot + " ", end="")
+            print(slot + " ", end="")
         print()
+
 
 def quit(user_input):
     """
@@ -45,16 +48,21 @@ def quit(user_input):
         print("Thank you for playing!")
         return True
     else:
-         return False
+        return False
+
 
 def check_input(user_input):
     """
     Check if user input is a number
     """
-    if not isnum(user_input): return False
+    if not isnum(user_input):
+        return False
     user_input = int(user_input)
-    if not bounds(user_input): return False
+    if not bounds(user_input):
+        return False
+
     return True
+
 
 def isnum(user_input):
     """
@@ -63,15 +71,20 @@ def isnum(user_input):
     if not user_input.isnumeric():
         print("This is not a valid number")
         return False
-    else: return True
+    else:
+        return True
+
+
 def bounds(user_input):
     """
-    check if the number inserted is between the number 1-9
+    check if the number inserted is between the number 1 - 9
     """
     if user_input > 9 or user_input < 1:
         print("This number is not in range")
         return False
-    else: return True    
+    else:
+        return True
+
 
 def istaken(coords, board):
     """
@@ -79,10 +92,11 @@ def istaken(coords, board):
     """
     row = coords[0]
     col = coords[1]
-    if board[row][col] != "-":
+    if board[row][col] != " - ":
         print("This posotion is already taken, try again.")
         return True
-    else: return False    
+    else:
+        return False
 
 
 def coordinates(user_input):
@@ -90,33 +104,44 @@ def coordinates(user_input):
     enter the cordinates of the board positons
     """
     row = int(user_input / 3)
-    col = user_input 
-    if col > 2: col = int(col % 3)
-    return (row,col)
+    col = user_input
+    if col > 2:
+        col = int(col % 3)
+    return (row, col)
+
 
 def add_to_board(coords, board, active_user):
     """
-    add the user input to the board 
+    add the user input to the board
     """
     row = coords[0]
     col = coords[1]
     board[row][col] = active_user
 
+
 def current_user(user):
     """
     check who is the current winner
     """
-    if user: return "x"
-    else: return "o"
+    if user:
+        return "x"
+    else:
+        return "o"
+
 
 def iswin(user, board):
     """
     check to see if anyone has won through rowm col or diag
     """
-    if check_row(user, board): return True
-    if check_col(user, board): return True 
-    if check_diag(user, board): return True
+    if check_row(user, board):
+        return True
+    if check_col(user, board):
+        return True
+    if check_diag(user, board):
+        return True
+
     return False
+
 
 def check_row(user, board):
     """
@@ -128,8 +153,11 @@ def check_row(user, board):
             if slot != user:
                 complete_row = False
                 break
-        if complete_row: return True
+
+        if complete_row:
+            return True
     return False
+
 
 def check_col(user, board):
     """
@@ -141,23 +169,30 @@ def check_col(user, board):
             if board[row][col] != user:
                 complete_col = False
                 break
-        if complete_col: return True
+        if complete_col:
+            return True
     return False
-        
+
+
 def check_diag(user, board):
     """
     check to see if anyone has won through diag
     """
-    if board[0][0] == user and board[1][1] == user and board[2][2] == user: return True
-    elif board[0][2] == user and board[1][1] == user and board[2][0] == user: return True
-    else: return False
+    if board[0][0] == user and board[1][1] == user and board[2][2] == user:
+        return True
+    elif board[0][2] == user and board[1][1] == user and board[2][0] == user:
+        return True
+    else:
+        return False
 
 
 while turns < 9:
     active_user = current_user(user)
     print_board(board)
-    user_input = input("Please choose a position 1 through 9 or enter \"q\" to quit:")
-    if quit(user_input): break
+    user_input = input("Please choose a position 1 through 9"
+                       "or enter \"q\" to quit:")
+    if quit(user_input):
+        break
     if not check_input(user_input):
         print("Please try again!")
         continue
@@ -166,10 +201,11 @@ while turns < 9:
     if istaken(coords, board):
         print("Please try again!")
         continue
-    add_to_board(coords,board, active_user)
-    if iswin(active_user, board): 
+    add_to_board(coords, board, active_user)
+    if iswin(active_user, board):
         print(active_user + " Won!")
         break
     turns += 1
-    if turns == 9: print("It's a draw -_-")
+    if turns == 9:
+        print("It's a draw -_-")
     user = not user

@@ -1,84 +1,74 @@
-# Rock, Paper Scissor Game.
+# Tick, Tack, Toe Game.
 
-The perfect Rock, Paper Scissor Game is a fun and interactive game, it's perfect for playing with friends, family, and even yourself! When playing with people you hold dear and have spent a lot of time getting to know, the odds of knowing your next move becomes higher. That is why we have the function of playing against the computer! The computer selects a random option making a win, much more difficult! 
-
-The user of the game will learn how the game works, the rules, and how to explain it to others! The perfect Rock, Paper Scissor Game is targeted at children and adults!
+The perfect Tic, Tac, Toe game is a Python terminal game that runs in the Code Institute mock terminal on Heroku. Its a fun and interactive game that takes us right back to our child hood memories. Challenge yourself in a singel-player game, or get revenge from your long time rival in a multplayer game.
 
 <img width="800" alt="Screenshot 2022-11-04 at 19 00 39" src="https://user-images.githubusercontent.com/115544231/200068450-e89c9ec2-d544-41a9-9e7d-35b73807bec5.png">
 
+## How to play
+ Tic, Tac, Toe is a singel or multiplayer game. In the game there is a board with 3 x 3 options. 
 
-## Features
+ (If multiplayer) The palyers take turn putting marks on the 3 x 3 board. The end goal of the game is to be the player that gets three of the same symbols in a row, horizontally, vertically or diagonally. The player that first gets 3 of his/her symbols in a row wins the game. 
 
-### Existing Features
-- Header 
-- - On the top of the page we can see the name of the game with a background and font that are playful and contrasts the rest of the page
-- - The header clearly says what game the user is about to play. 
+ ## Game Rules
+ A player can choose between two symbols with his opponent, usual game uses “X” and “O”.
 
-<img width="800" alt="Screenshot 2022-11-04 at 21 25 49" src="https://user-images.githubusercontent.com/115544231/200068611-653ba2ac-02fc-4b24-90ef-866bf9e7e325.png">
+1. The player that gets to play first will get the "X" mark (we call him/her player 1) and the player that gets to play second will get the "O" mark (we call him/her player 2).
 
- - The Game Options
+2. Player 1 and 2 take turns making moves with Player 1 playing mark “X” and Player 2 playing mark “O”.
 
-- - The game options clearly instruct the player to make a move. 
-- - The user can see clear instructions on the moves he/she can make in form of three different pictures showing rock, paper, and scissors. 
-- - The user can simply press on one of the images to make their move. 
+3. A player marks any of the 3x3 squares with his mark (“X” or “O”) and their aim is to create a straight line horizontally, vertically or diagonally with two intensions:
 
-<img width="800" alt="Screenshot 2022-11-04 at 21 26 11" src="https://user-images.githubusercontent.com/115544231/200068677-93ed0a2b-8db5-4254-b42a-79859e1b1dcd.png">
+4. One of the players gets three of his/her marks in a row (vertically, horizontally, or diagonally) i.e. that player wins the game.
 
+5. If no one can create a straight line with their own mark and all the positions on the board are occupied, then the game ends in a draw/tie.
 
-- The Game Results
+## Fulfillment Plan
+The fulfillment plan is as follows: 
+<img>
 
-- - When the user decides what move to make, their choice displays as the first word.
-- - The computer uses the java code to choose a random option. The option the bot chooses is then displayed as the third word. 
-- - When both the user and the computer have made their move, the score is updated and the winner is presented in the form of text!
-- - The winner and score are clear for the user to see which makes the game easy to understand and play.
+- First the game will start with rule description on how to play.
+- Under the rules there will be an example board that shows each positions number. 
+- Under the example boatd is official game board.
+- And under the game board there is instruciton on what to do and how to quit the game. <img>
+Then Player 1 will make his/her move by placing his  “X” mark on the board. Then Player 2 will make his/her move by placing mark “O” on the board. This will keep on going until the board is full of marks.
 
-<img width="800" alt="Screenshot 2022-11-04 at 21 31 30" src="https://user-images.githubusercontent.com/115544231/200068808-3f444192-5a67-4f67-9a30-b9f11ca9812e.png">
+Then the program will check if Player 1 with “X” wins or Player 2 with “O” wins and that scenario will be follows: (could be vertically, horizontally or diagonally).
+<img> <img>
+If none of the players win, the program will check for draw.
 
-- The Footer
-- - The footer shows the rules of the game. 
-- - The Footer is very helpful to the user that has never played the game before or has forgotten the rules. 
+ ## Features
+ ### Exsisting features
+ 
+ - Board generation 
+ <img>
+ 
+ - Accepts user input
+ - Checks for wins
+ - Checks for draw
+ - Checks for loss
+ <img>
 
-<img width="800" alt="Screenshot 2022-11-04 at 21 26 32" src="https://user-images.githubusercontent.com/115544231/200068934-4a321140-7178-4b1a-9c58-631d6e71f187.png">
+ - Input validation and error chceking
+ - - You cannot enter a number samller than 1 or bigger than 9. 
+ - - You must enter a number.
+ - - You cannot choose a position already taken. 
+ - - You can press q to quit the game. 
 
-### Features Left To Implement 
-- I would like to have the possibility to play to a certain amount of points before the game ends. 
-- I would also like to add the Lizard and Spock options in the future. 
+ <img>
 
+ ## Future Features 
+ - Play against computer. 
+ - Choose dificulty level on computer.
+ - keep scores.
+ - Play multiple rounds
 
-## Testing 
-- I have tested that this page works in different browsers such as Chrome, Safari, and Firefox.
+ ## Testing
+ I have manually tested this project by doing the following: 
+ - Passed the code through a PEP8 linter and confirmed there are no major issues.
+ - given invalid inputs: strings when numbers are expected, out of bound inputs, same input that is already occupied. 
 
-- I have confirmed that this project is responsive, looks good, and functions on all standard screen sizes using dev tools bar.
-
-- I have confirmed that the header, instructions, options, and footer text are all readable and easy to understand.  
-
-- I have confirmed that the color and fonts are all easy to read and accessible by running them through lighthouse in dev tools. 
-
-<img width="800" alt="Screenshot 2022-11-04 at 21 27 35" src="https://user-images.githubusercontent.com/115544231/200069065-20dfcbe9-4c0e-4637-b4fb-3e887227bf28.png">
-
-
-## Bugs 
-### Solved Bugs
-- I had trouble when trying to display the winner on the website. The issue was that I had forgotten to define the user and bot. 
-- I had issues defining the winner between the bot and the user. The issue was that I had forgotten to add two "&&" characters. 
-- Another issue I ran into was how to display full numbers instead of decimal numbers. I found the solution from my "Love Maths" Project
-
-## Unfixed Bugs
-No unfixed bugs. 
-
-# Deployment
-- The site was deployed onto GitHub Pages. The steps are as follows:
-- - In the GitHub repository go to the setting tab
-- - Go to the pages tab on the right
-- - Navigate to the branches section and press the none drop-down menu
-- - Select the "Main" option
-- - Press save and a link is given to me to complete the website.
-Live link can be found here -  <a href="https://mustafanaji0413.github.io/rock-paper-scissors/">ROCK PAPER SCISSOR</a>
-
-## Credits
-
-### Content 
-- The code to show the whole number instead of decimal numbers was taken from the Love Maths project. 
-
-### Media
-- The images for the 3d rendered hands were taken from <a href="https://www.flaticon.com/">FlatIcon</a>
+ ### Bugs
+ #### Solved bugs
+ - I was having difficulties on how to read number inside a string. I found the solution on stack overflow to use ".numeric". That solved my issue. 
+ - I also had issues when entering a valid number it told me "Please try again". I found that the mistake I made was I had forgotten to enter what my isnum is going to return. The solution was to enter a boolian to check if i entered a number. If the boolian was true if would allow me to enter a number without any errors. 
+ - Another issue a ran into was how to give the player the option to enter "q" to quit. First I tried using break to end the game, but i was not working. After spoke to tutor support and further reserch I found that we cant break because we are not in a loop. So I resorted back to boolians to solve the issue. 
