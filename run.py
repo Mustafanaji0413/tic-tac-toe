@@ -17,7 +17,7 @@ jump between users after each correct move
 
 print("The rules are simple. Get three in a row to win the game.")
 print("Either through collumns, rows or diagonally. Good luck! \n")
-print(" 1,  2,  3,\n 4,  5,  6,\n 7,  8,  9\n")
+print("1, 2, 3,\n4, 5, 6,\n7, 8, 9\n")
 
 
 board = [
