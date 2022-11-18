@@ -51,8 +51,6 @@ If none of the players win, the program will check for a draw.
 <img width="730" alt="Screenshot 2022-11-18 at 18 57 34" src="https://user-images.githubusercontent.com/115544231/202771426-5d2cb449-dae2-4eea-b617-125745ab303e.png">
 
 
-
-
  ## Features
  ### Existing features
  
@@ -84,11 +82,21 @@ If none of the players win, the program will check for a draw.
  - Passed the code through a PEP8 linter and confirmed there are no major issues.
  - given invalid inputs: strings when numbers are expected, out-of-bound inputs, same input that is already occupied. 
 
+
  ### Bugs
  #### Solved bugs
- - I was having difficulties with how to read numbers inside a string. I found the solution on stack overflow to use ".numeric". That solved my issue. 
- - I also had issues when entering a valid number it told me "Please try again". I found that the mistake I made was I had forgotten to enter what my isnum is going to return. The solution was to enter a boolean to check if I entered a number. If the boolean was true it would allow me to enter a number without any errors. 
- - Another issue a ran into was how to give the player the option to enter "q" to quit. First I tried using a break to end the game, but it was not working. After speaking to tutor support and doing further research I found that we can't break because we are not in a loop. So I resorted back to booleans to solve the issue. 
+ - I was having difficulties with how to read numbers inside a string. I found the solution on W3Schools to use ".numeric". That solved my issue. 
+
+ - I also had issues when entering a valid number it told me "Please try again". I found that the mistake I made from Youtube that I had forgotten to enter what my isnum is going to return. The solution was to enter a boolean to check if I entered a number. If the boolean was true it would allow me to enter a number without any errors. 
+
+ - Another issue a ran into was how to give the player the option to enter "q" to quit. First I tried using a break to end the game, but it was not working. After speaking to tutor support and doing further research I found that we can't break because we are not in a loop. So I resorted back to booleans to solve the issue.
+
+ ### Remaning bugs
+ - Small cautions still remain, most of them regarding to "redefined outer name".
+
+ ### Validator testing
+ -  <a href="https://extendsclass.com/python-tester.html">Extends Class</a>
+ - - No errors were returned from Extendsclass.com
 
 
  ## Deployment
@@ -101,5 +109,6 @@ If none of the players win, the program will check for a draw.
 
  ### Credits 
  - Code Institute for the tutor support. 
- - Youtube for help with some of the issue I ran into. 
- - Stack Overflow for the issue I ran into. 
+ - <a href="https://www.youtube.com/watch?v=n2o8ckO-lfk&t=2379s">Youtube</a> for help with the issue I ran into regarding entering a valid number. 
+ - <a href="https://www.w3schools.com/python/ref_string_isnumeric.asp">W3Schools</a> for the issue I with reading a number from a string Issue I ran into. 
+ - My mentor for pointing me in the correct direction to look in order to solve my bugs. 
