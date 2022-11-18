@@ -72,3 +72,17 @@ If none of the players win, the program will check for draw.
  - I was having difficulties on how to read number inside a string. I found the solution on stack overflow to use ".numeric". That solved my issue. 
  - I also had issues when entering a valid number it told me "Please try again". I found that the mistake I made was I had forgotten to enter what my isnum is going to return. The solution was to enter a boolian to check if i entered a number. If the boolian was true if would allow me to enter a number without any errors. 
  - Another issue a ran into was how to give the player the option to enter "q" to quit. First I tried using break to end the game, but i was not working. After spoke to tutor support and further reserch I found that we cant break because we are not in a loop. So I resorted back to boolians to solve the issue. 
+
+
+ ## Deployment
+ This project was deployed using Code Institue's mock termnial for Heroku.
+ - Steps for deployment:
+ - - Create a new Heroku app
+ - - Set build packs to python and node.js
+ - - Link the Heroku app to the repository
+ - - click on **Deploy**
+
+ ### Credits 
+ - Code Institute for the tutor support. 
+ - <a href="">Youtube </a> for help with some of the issue i ran into. 
+ - Stack overflow for the issue i ran into. 
